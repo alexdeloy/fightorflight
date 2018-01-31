@@ -1,0 +1,219 @@
+ @font-face {
+    font-family: "BigNoodleTooOblique";
+    src: url("../fonts/BigNoodleTooOblique.eot");
+    src: url("../fonts/BigNoodleTooOblique.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/BigNoodleTooOblique.woff2") format("woff2"),
+        url("../fonts/BigNoodleTooOblique.woff") format("woff"),
+        url("../fonts/BigNoodleTooOblique.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Koverwatch";
+    src: url("../fonts/Koverwatch.eot");
+    src: url("../fonts/Koverwatch.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Koverwatch.woff2") format("woff2"),
+        url("../fonts/Koverwatch.woff") format("woff"),
+        url("../fonts/Koverwatch.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: #fef5ee;
+    background: -moz-radial-gradient(center, ellipse cover, #fef5ee 0%, #c7b8df 71%, #6672a6 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #fef5ee 0%,#c7b8df 71%,#6672a6 100%);
+    background: radial-gradient(ellipse at center, #fef5ee 0%,#c7b8df 71%,#6672a6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fef5ee', endColorstr='#6672a6',GradientType=1 );
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+header {
+    padding: 2rem;
+}
+
+h1 {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image:linear-gradient(0deg, transparent,#6fffff);
+    color: #6fffff;
+    font-family: "BigNoodleTooOblique";
+    font-size: 7rem;
+    margin: 0;
+    opacity: 0.8;
+    padding: 0;
+}
+
+h2 {
+    color: #ffffff;
+    font-family: "BigNoodleTooOblique";
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -2rem;
+    left: 1rem;
+}
+
+main {    
+    margin: 5rem auto;
+    text-align: center;
+    width: 50vw;
+}
+
+button {
+    background: #2f8ac6;
+    color: #ffffff;
+    font-family: "Nunito";
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    border: none;  
+    padding: 0.5rem 3rem;
+    cursor: pointer; 
+    min-width: 10rem;
+}
+
+button + button {
+    margin: 0 0 0 2rem;
+}
+
+button:hover {
+    background: #eba334;
+}
+
+@keyframes slide-in {
+    from {left: -100vw;}
+    to {left: 0;}
+}
+
+@keyframes slide-out {
+    from {left: 0;}
+    to {left: 100vw;}
+}
+
+@keyframes fade-out {
+    0%   { opacity: 0.0; }
+    25%   { opacity: 1.0; }
+    99%   { opacity: 0.0; }
+    100% {opacity: 0; display: none;}
+}
+
+.voiceline {
+    animation: slide-in 1s 0 ease-in-out;
+    color: #fef5ee;
+    position: relative;
+    text-shadow: 0 0 4rem #847a96;
+    font-family: "BigNoodleTooOblique";
+    font-size: 6rem;        
+}
+
+.character {
+    color: #eba334;
+    text-shadow: 0 0 2.5rem #fff;
+    font-family: "BigNoodleTooOblique";
+    font-size: 4rem;    
+    text-indent: 2rem;
+}
+
+main p {
+    font-family: sans-serif;
+    color: #1c3f57;
+    font-size: 1.5rem;
+}
+
+em {
+    color: #2f8ac6;
+}
+
+.result {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    transition: all 1s ease-in-out;
+    opacity: 0;
+    display: none;
+}
+
+.result.active {
+    animation: fade-out 2s 1 ease-in-out;
+    opacity: 1.0;
+    display: block;
+}
+
+.correct, .wrong {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 180px;
+    line-height: 100vh;
+    font-family: "BigNoodleTooOblique";
+    text-transform: uppercase;
+}
+
+.correct {
+    color: #ffc943;
+    text-shadow: 0 0 0.5rem #f6af00;
+    display: none;
+}
+
+.wrong {
+    color: #e80121;
+    text-shadow: 0 0 0.5rem #b5011a;
+    display: none;
+}
+
+.correct.active,
+.wrong.active {
+    display: block;
+}
+
+
+/* ---------------------------------------------------------------------------------------------- */
+
+footer {    
+    bottom: 2rem;
+    left: 2rem;
+    overflow: auto;
+    position: absolute;
+}
+
+footer div {
+    color: #ffffff;
+    float: right;
+    font-family: "Nunito", Arial, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 900;
+    margin: 0 2rem 0 0;
+    text-transform: uppercase;
+}
+
+footer .key {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    color: #ffffff;
+    display: inline-block;
+    font-family: "Nunito", Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin: 0 0.5rem 0 0;
+    min-width: 1rem;
+    padding: 0.45rem 0.7rem;
+    text-align: center;
+}
