@@ -142,8 +142,7 @@ em {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    transition: all 1s ease-in-out;
+    background: rgba(0, 0, 0, 0.7);
     opacity: 0;
     display: none;
 }
@@ -152,6 +151,12 @@ em {
     animation: fade-out 2s 1 ease-in-out;
     opacity: 1.0;
     display: block;
+}
+
+.result .character {
+    top: 60vh;
+    position: relative;
+    text-shadow: 0 0 1.5rem #f6af00;
 }
 
 .correct, .wrong {

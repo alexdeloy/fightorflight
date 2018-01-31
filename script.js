@@ -42,11 +42,11 @@ let checkAnswer = function(isAlly) {
     character.innerHTML = voicelines[current].type + " " + voicelines[current].character;    
     window.setTimeout(function() {
         newLine();
-    }, 750);
+    }, 2000);
 
     window.setTimeout(function() {
         answering = false;
-    }, 1500);
+    }, 2000);
 }
 
 let showCorrect = function() {

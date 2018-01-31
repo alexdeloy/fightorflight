@@ -125,7 +125,7 @@ voicelines = [
     },
     {
         "character": "Mercy",
-        "line": "Gemeinsam wir kämpfen!",
+        "line": "Gemeinsam kämpfen wir!",
         "type": "enemy"
     },
     {
