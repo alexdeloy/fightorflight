@@ -16,9 +16,14 @@
 }
 
 main {    
-    margin: 5rem auto;
+    margin: 0 auto;
     text-align: center;
     width: 50vw;
+
+    @media all and (max-width: $width-mobile) {
+        width: 90vw;
+        margin: 0 auto;
+    }          
 
     p {
         color: $color-text;
@@ -43,6 +48,17 @@ button {
     padding: 0.5rem 3rem;
     text-transform: uppercase;
     
+    @media all and (max-width: $width-mobile) {
+        padding: 0.5rem 0;
+        text-align: center;
+        min-width: auto;
+        width: 35vw;
+
+        & + button {
+            margin: 0 0 0 5vw;
+        }
+    }    
+
     &:hover {
         background: $color-yellow;
     }
@@ -59,6 +75,10 @@ button {
     text-shadow: 0 0 4rem $color-background-medium;
     font-family: "BigNoodleTooOblique";
     font-size: 6rem;
+
+    @media all and (max-width: $width-mobile) {
+        font-size: 3.5rem;
+    }    
 }
 
 .result {
@@ -82,7 +102,7 @@ button {
         bottom: 0;
         display: none;
         font-family: "BigNoodleTooOblique";
-        font-size: 180px;
+        font-size: 11rem;
         left: 0;
         line-height: 100vh;
         position: absolute;
@@ -93,6 +113,10 @@ button {
         &.active {
             display: block;
         }    
+
+        @media all and (max-width: $width-mobile) {
+            font-size: 4rem;
+        }  
     }
     
     .correct {
@@ -110,8 +134,11 @@ button {
         font-family: "BigNoodleTooOblique";
         font-size: 4rem;    
         position: relative;
-        text-indent: 2rem;
         text-shadow: 0 0 1.5rem darken($color-yellow, 15%);
         top: 60vh;
+
+        @media all and (max-width: $width-mobile) {
+            font-size: 3rem;
+        }  
     }    
 }

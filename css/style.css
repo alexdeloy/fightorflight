@@ -32,15 +32,23 @@ header {
     margin: 0;
     opacity: 0.8;
     padding: 0; }
+    @media all and (max-width: 1024px) {
+      header h1 {
+        font-size: 3rem; } }
   header h2 {
     color: #ffffff;
     font-family: "BigNoodleTooOblique";
     font-size: 2.5rem;
     margin: 0;
     padding: 0;
+    font-weight: 300;
     position: relative;
     top: -2rem;
     left: 1rem; }
+    @media all and (max-width: 1024px) {
+      header h2 {
+        font-size: 1.5rem;
+        top: -1rem; } }
 
 @keyframes slide-in {
   from {
@@ -63,9 +71,13 @@ header {
     opacity: 0;
     display: none; } }
 main {
-  margin: 5rem auto;
+  margin: 0 auto;
   text-align: center;
   width: 50vw; }
+  @media all and (max-width: 1024px) {
+    main {
+      width: 90vw;
+      margin: 0 auto; } }
   main p {
     color: #1c3f57;
     font-family: "Nunito", sans-serif;
@@ -84,6 +96,14 @@ button {
   min-width: 10rem;
   padding: 0.5rem 3rem;
   text-transform: uppercase; }
+  @media all and (max-width: 1024px) {
+    button {
+      padding: 0.5rem 0;
+      text-align: center;
+      min-width: auto;
+      width: 35vw; }
+      button + button {
+        margin: 0 0 0 5vw; } }
   button:hover {
     background: #eba334; }
   button + button {
@@ -96,6 +116,9 @@ button {
   text-shadow: 0 0 4rem #c7b8df;
   font-family: "BigNoodleTooOblique";
   font-size: 6rem; }
+  @media all and (max-width: 1024px) {
+    .voiceline {
+      font-size: 3.5rem; } }
 
 .result {
   background: rgba(0, 0, 0, 0.7);
@@ -115,7 +138,7 @@ button {
     bottom: 0;
     display: none;
     font-family: "BigNoodleTooOblique";
-    font-size: 180px;
+    font-size: 11rem;
     left: 0;
     line-height: 100vh;
     position: absolute;
@@ -124,6 +147,9 @@ button {
     top: 0; }
     .result .correct.active, .result .wrong.active {
       display: block; }
+    @media all and (max-width: 1024px) {
+      .result .correct, .result .wrong {
+        font-size: 4rem; } }
   .result .correct {
     color: #eba334;
     text-shadow: 0 0 0.5rem #c07c13; }
@@ -135,15 +161,20 @@ button {
     font-family: "BigNoodleTooOblique";
     font-size: 4rem;
     position: relative;
-    text-indent: 2rem;
     text-shadow: 0 0 1.5rem #c07c13;
     top: 60vh; }
+    @media all and (max-width: 1024px) {
+      .result .character {
+        font-size: 3rem; } }
 
 footer {
   bottom: 2rem;
   overflow: auto;
   position: absolute;
   right: 2rem; }
+  @media all and (max-width: 1024px) {
+    footer {
+      display: none; } }
   footer div {
     color: #ffffff;
     float: right;

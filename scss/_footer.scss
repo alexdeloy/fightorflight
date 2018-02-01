@@ -4,6 +4,10 @@ footer {
     position: absolute;
     right: 2rem;
 
+    @media all and (max-width: $width-mobile) {
+        display: none;
+    }  
+
     div {
         color: $color-white;
         float: right;
