@@ -1,0 +1,51 @@
+
+// --- Font definitions ---------------------------------------------------------------------------
+@font-face {
+    font-family: "BigNoodleTooOblique";
+    src: url("../fonts/BigNoodleTooOblique.eot");
+    src: url("../fonts/BigNoodleTooOblique.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/BigNoodleTooOblique.woff2") format("woff2"),
+        url("../fonts/BigNoodleTooOblique.woff") format("woff"),
+        url("../fonts/BigNoodleTooOblique.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+// --- Color definitions --------------------------------------------------------------------------
+$color-white: #ffffff;
+$color-black: #000000;
+$color-blue: #2f8ac6;
+$color-yellow: #eba334;
+$color-red: #e80121;
+$color-background-light: #fef5ee;
+$color-background-medium: #c7b8df;
+$color-background-dark: #6672a6;
+$color-headline: #6fffff;
+$color-text: #1c3f57;
+
+
+// --- general styling ----------------------------------------------------------------------------
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: $color-background-dark;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background: radial-gradient(ellipse at center, $color-background-light 0%, $color-background-medium 71%, $color-background-dark 100%);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+
+// --- Includes -----------------------------------------------------------------------------------
+@import "header";
+@import "main";
+@import "footer";
