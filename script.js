@@ -97,3 +97,32 @@ let newLine = function() {
 
 shuffleVoicelines();
 newLine();
+
+
+// --- Swipe detection 
+let touchStart = {x:0, y:0};
+let touchEnd = {x:0, y:0};
+
+document.body.addEventListener("touchstart", function(event) {
+    touchStart.x = event.event.changedTouches[0].screenX;
+    touchStart.y = event.event.changedTouches[0].screenY;
+}, false);
+
+document.body.addEventListener("touchend", function(event) {
+    touchEnd.x = event.event.changedTouches[0].screenX;
+    touchEnd.y = event.event.changedTouches[0].screenY;
+
+    // check if the user swiped horizontally
+    if (Math.abs(touchEnd.x - touchStart.x) > Math.abs(touchEnd.y - touchStart.y)) {
+        // swipe right
+        if (touchEnd.x > touchStart.x) {
+            checkAnswer(true);
+        }
+
+        // swipe left
+        if (touchEnd.x < touchStart.x) {
+            checkAnswer(false);
+        }
+    }
+
+}, false); 
